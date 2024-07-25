@@ -1,0 +1,217 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html {
+    background-color: black;
+    font-family: 'Oswald', sans-serif;
+    color: white;
+}
+header{
+	background-color: #FFFF00;
+    height: 5%;
+    display: flex;
+    justify-content: center;
+    padding: 0.3%;
+}
+img{
+    padding-left: 50%;
+    align-content: center;
+    height: 1.1cm;
+    margin-top: 1%;
+}
+/* menu  */
+.hamburger img{
+    height: 0.8cm;
+    width: 0.8cm;
+    margin-right: 3%;
+}
+.hamburger {
+  position: fixed;
+  z-index: 100;
+  top: 1%;
+  right: 1rem;
+  padding: 1%;
+  cursor: pointer;
+  color: white;
+  background-color: transparent;
+  border: none;
+  font-size: calc(1em + 1vw);
+
+}
+.closeIcon {
+  display: none;
+}
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+}
+.menu li {
+    padding: 10% 10%;
+}
+.menu {
+  position: fixed;
+  transform: translateY(-120%);
+  transition: transform 0.2s;
+  top: 10%;
+  left: 77%;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  background: url(img/menu.png) ;
+  background-size: cover;
+  color: black;
+  list-style: none;
+  padding-top: 1cm;
+  width: 250px;
+  height: 500px;
+}
+.showMenu {
+  transform: translateY(0);
+}
+/*imagenes*/
+    .contenedor{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin-top: -10%;
+        margin-bottom: -25%;
+    }
+    .contenedor figure{
+       position:relative;
+        height: 200px;
+        cursor: pointer;
+        width: 250px;
+        overflow: hidden;
+        border-radius: 6px;
+        box-shadow: 0px 15px 25px rgba(0,0,0,0.50);
+    }
+    .contenedor figure img{
+        padding: 3% 30% 0;
+        height: 80%;
+        transition: all 400ms ease-out;
+        will-change: transform;
+    }
+    .contenedor figure .capa{
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(56, 56, 56, 0.5);
+        transition: all 400ms ease-out;
+        opacity: 0;
+        visibility: hidden;
+       text-align: center;
+    }
+    .contenedor figure:hover > .capa {
+        opacity: 1;
+        visibility: visible;
+    }
+    .contenedor figure:hover > .capa h3{
+        margin-top: 70px;
+        margin-bottom: 15px;
+    }
+    .contenedor figure .capa h3{
+        color: #fff;
+        font-weight: 400;
+        margin-bottom: 120px;
+        transition: all 400ms ease-out;
+        margin-top: 30px;
+    }
+    .contenedor figure .capa p{
+        font-family: 'Oswald', sans-serif;
+        color: #fff;
+        font-size: 15px;
+        line-height: 1.5;
+        width: 100%;
+        max-width: 220px;
+        margin: auto;
+    }
+
+/*Popup*/
+#myImg {
+  cursor: pointer;
+  transition: 0.3s;
+  margin: 15% 0% 3% -5%;
+  height: 1.5cm;
+}
+#myImg:hover {opacity: 0.7;}
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed; 
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-color: black;
+}
+.modal img {
+    height: 100%;
+    position: absolute;
+    right: 32%;
+}
+.close {
+  position: absolute;
+  top: 15px;
+  left: 35px;
+  color: #f1f1f1;
+  font-size: 60px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+/*Sig*/
+.sig{
+    background: url(img/fondo.png) no-repeat;
+    background-size: cover;
+    text-align: center;
+    padding: 3%;
+}
+
+@media screen and (max-width: 400px){
+    .menu{
+        left: 0%;
+        width: 100%;
+        height: 100%;
+    }
+    .menu li {
+        padding: 7% 5%;
+    }
+    img{
+        padding-left: 50%;
+        height: 0.9cm;
+    }
+    .contenedor{
+        margin-top: -30%;
+        margin-bottom: -80%;
+    }
+    .contenedor figure{
+        height: 100px;
+    }
+    .contenedor figure .capa h3{
+        font-size:5px;
+    }
+    .contenedor figure .capa p{
+        font-size: 5px;
+    }
+    #myImg {
+      margin: 50% -10% 10%;
+      height: 1cm;
+    }
+    .sig{
+        font-size: calc(0.5em + 1vw);
+    }
+    .modal img {
+        right: 0%;
+    }
+    
+}

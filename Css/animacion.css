@@ -1,0 +1,111 @@
+.Muñequito{
+	animation-name: animation;
+	animation-duration: 2.5s;
+	animation-direction: normal;
+}
+@keyframes animation{
+	0%{
+		transform: translateX(-200%);
+	}
+	75%{
+		transform: translateX(17%);
+	}
+	100%{
+		transform: translateX(0%);
+	}
+}
+#Y{
+	animation-name: caer;
+	animation-duration: 0.5s;
+	animation-direction: normal;
+	animation-delay: 2s;
+}
+#u{
+	animation-name: caer;
+	animation-duration: 0.5s;
+	animation-direction: normal;
+	animation-delay: 2.2s;
+}
+#n{
+	animation-name: caer;
+	animation-duration: 0.5s;
+	animation-direction: normal;
+	animation-delay: 2.4s;
+	padding-right: 5mm;
+}
+#M{
+	animation-name: caer;
+	animation-duration: 0.5s;
+	animation-direction: normal;
+	animation-delay: 2.6s;
+}
+#o{
+	animation-name: caer;
+	animation-duration: 0.5s;
+	animation-direction: normal;
+	animation-delay: 2.8s;
+}
+#oo{
+	animation-name: caer;
+	animation-duration: 0.5s;
+	animation-direction: normal;
+	animation-delay: 3s;
+	padding-right: 5mm;
+}
+#K{
+	animation-name: caer;
+	animation-duration: 0.5s;
+	animation-direction: normal;
+	animation-delay: 3.2s;
+}
+#w{
+	animation-name: caer;
+	animation-duration: 0.5s;
+	animation-direction: normal;
+	animation-delay: 3.4s;
+}
+#a{
+	animation-name: caer;
+	animation-duration: 0.5s;
+	animation-direction: normal;
+	animation-delay: 3.6s;
+}
+#nn{
+	animation-name: caer;
+	animation-duration: 0.5s;
+	animation-direction: normal;
+	animation-delay: 3.8s;
+}
+
+
+@keyframes caer {
+	0%{
+		transform: translatey(0%);
+		color: #FFFF00;
+	}
+	50%{
+		transform: translateY(130%) ;
+	}
+	100%{
+		transform: translateY(0%) ;
+	}
+}
+
+/* Patada */
+
+.patada{
+	height: 8cm;
+	width: 9cm;
+	background: url("img/patada.png") no-repeat;
+	margin-left: 35%;
+	animation: mover 1s steps(2) infinite;
+	margin-bottom: 4cm;
+}
+@keyframes mover{
+	0%{
+		background-position: 0cm;
+	}
+	100%{
+		background-position: -20cm;
+	}
+}
