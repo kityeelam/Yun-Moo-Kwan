@@ -79,15 +79,18 @@ body{
 	flex-direction: column;
 	margin: 1% 2%;
 }
-#Cuadrado{
-	width:100%;
-	height:100%;
-	background-color: #FFFF00;
+#Cuadrado {
+	width: 150px;
+	height: 150px;
 	border-radius: 20px;
 	text-align: center;
 	font-size: calc(4em + 1vw);
 	color: black;
-	margin: 5% -1%;
+	background: yellow;
+	margin: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 #Cuadrado a{
 	text-decoration: none;
@@ -211,5 +214,69 @@ td{
 	td{
 		float: left;
 		font-size: calc(0.5em + 1vw);
+	}
+}
+
+@media screen and (max-width: 768px) {
+  .Muñequito {
+    width: 60%;
+    top: 5%;
+    left: 20%;
+  }
+.Nombre {
+  position: absolute;
+  top: 28%;
+  left: 49%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+.Nombre h2 {
+  display: inline-block;
+  font-size: 1.5rem;
+  font-family: "Boss Fight";
+  color: white;
+  margin: 0 2px;
+}
+  .Escudo {
+    height: 20%;
+    top: 40%;
+    left: 30%;
+  }
+  .Informacion {
+    left: 5%;
+    top: 65%;
+    width: 90%;
+    font-size: 1.5rem;
+  }
+  .flecha {
+    top: 75%;
+    left: 40%;
+  }
+  .historia img {
+    left: 5%;
+    width: 90%;
+  }
+  .historia p {
+    margin: 60% 5% 5%;
+    font-size: calc(0.8em + 1vw);
+  }
+	.Poomsae {
+		font-size: calc(1.2em + 1vw);
+		margin: 3% 5%;
+		text-align: center;
+	}
+	#Cuadrado {
+		font-size: calc(2em + 3vw);
+		margin: 10% 0;
+		padding: 10px;
+	}
+	.Formas {
+		flex-direction: column;
+		text-align: center;
+		margin: 6% 4%;
+	}
+	td {
+		padding: 10px 0;
+		display: block;
 	}
 }
