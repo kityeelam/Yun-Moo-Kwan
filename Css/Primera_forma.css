@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
@@ -7,69 +7,79 @@ html {
     font-family: 'Oswald', sans-serif;
     color: white;
 }
-header{
-	background-color: #FFFF00;
+
+/* Encabezado */
+header {
+    background-color: #FFFF00;
     height: 5%;
     display: flex;
     justify-content: center;
     padding: 0.3%;
 }
-img{
+img {
     padding-left: 50%;
     align-content: center;
     height: 1.1cm;
     margin-top: 1%;
 }
-/* menu  */
-.hamburger img{
+
+/* === MENÚ HAMBURGUESA === */
+.hamburger {
+    display: none; /* Solo visible en móviles con media query */
+    position: fixed;
+    z-index: 100;
+    top: 1%;
+    right: 1rem;
+    padding: 1%;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    font-size: calc(1em + 1vw);
+}
+.hamburger img {
     height: 0.8cm;
     width: 0.8cm;
     margin-right: 3%;
 }
-.hamburger {
-  position: fixed;
-  z-index: 100;
-  top: 1%;
-  right: 1rem;
-  padding: 1%;
-  cursor: pointer;
-  color: white;
-  background-color: transparent;
-  border: none;
-  font-size: calc(1em + 1vw);
 
-}
 .closeIcon {
-  display: none;
+    display: none;
 }
+
+/* Menú lateral */
+.menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100vh;
+    background: url('img/menu.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    list-style: none;
+    padding-top: 2rem;
+    padding-left: 1rem;
+    transform: translateX(100%); /* Oculto fuera de pantalla a la derecha */
+    transition: transform 0.3s ease-in-out;
+    z-index: 99;
+}
+
+.menu li {
+    padding: 10% 10%;
+}
+
 .menu a {
     text-decoration: none;
     color: white;
     font-family: 'Oswald', sans-serif;
 }
-.menu li {
-    padding: 10% 10%;
-}
-.menu {
-  position: fixed;
-  transform: translateY(-120%);
-  transition: transform 0.2s;
-  top: 10%;
-  left: 77%;
-  right: 0;
-  bottom: 0;
-  z-index: 99;
-  background: url(img/menu.png) ;
-  background-size: cover;
-  color: black;
-  list-style: none;
-  padding-top: 1cm;
-  width: 250px;
-  height: 500px;
-}
+
+/* Menú activado */
 .showMenu {
-  transform: translateY(0);
+    transform: translateX(0);
 }
+
 /*imagenes*/
     .contenedor{
         width: 100%;
@@ -177,41 +187,55 @@ img{
     padding: 3%;
 }
 
-@media screen and (max-width: 400px){
-    .menu{
-        left: 0%;
-        width: 100%;
-        height: 100%;
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
     }
-    .menu li {
-        padding: 7% 5%;
+
+    .menu {
+        display: block;
     }
-    img{
-        padding-left: 50%;
-        height: 0.9cm;
+     .contenedor {
+        flex-direction: column;
+        height: auto;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding: 3rem 0;
     }
-    .contenedor{
-        margin-top: -30%;
-        margin-bottom: -80%;
+
+        .contenedor figure {
+        width: 260px;
+        height: 240px;
+        margin-bottom: 1rem;
     }
-    .contenedor figure{
-        height: 100px;
+
+    .contenedor figure img {
+        padding: 5% 20% 0;
+        height: 80%;
     }
-    .contenedor figure .capa h3{
-        font-size:5px;
+
+    .contenedor figure .capa h3 {
+        font-size: 1rem;
+        margin-top: 20px;
+        margin-bottom: 5px;
     }
-    .contenedor figure .capa p{
-        font-size: 5px;
+    .contenedor figure .capa p {
+        font-size: 14px;
+        max-width: 90%;
     }
-    #myImg {
-      margin: 50% -10% 10%;
-      height: 1cm;
-    }
-    .sig{
-        font-size: calc(0.5em + 1vw);
-    }
-    .modal img {
-        right: 0%;
-    }
-    
+     #myImg {
+    height: 1cm;
+    margin: 10% 0%;
+    padding: 0 40%;
+    display: block;
+  }
+  .modal img {
+    max-height: 80%;
+    max-width: 95%;
+  }
+  .close {
+    font-size: 40px;
+    right: 15px;
+    top: 10px;
+  }
 }
